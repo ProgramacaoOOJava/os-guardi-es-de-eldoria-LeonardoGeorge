@@ -1,4 +1,4 @@
-public class Personagem {
+public abstract class Personagem {
     String nome;
     String classe;
     int nivel;
@@ -23,6 +23,9 @@ public class Personagem {
         System.out.println("Vida: " + pontosDeVida);
         System.out.println("Poder: " + poderBase);
     }
+
+    // Método abstrato que será implementado pelas classes filhas
+    public abstract void usarHabilidadeEspecial();
 }
 
 

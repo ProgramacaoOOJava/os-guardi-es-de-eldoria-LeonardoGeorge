@@ -1,13 +1,36 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Personagem heroi1 = new Personagem("Arthus", "Guerreiro", 1, 100, 10.5);
-        Personagem heroi2 = new Personagem("Lotus", "Arqueira", 1, 85, 13.5);
-        Personagem heroi3 = new Personagem("Alquimista", "Mago", 1, 65, 16);
+        //Criando personagens usando novas classes
+        Guerreiro heroi1 = new Guerreiro("Arthus", 1, 100, 10.5, "Espada Flamejante");
+        Guerreiro heroi2 = new Guerreiro("Lotus", 1 , 85, 13.5,"Arco Élfico");
+        Mago heroi3 = new Mago("Alquimista", 1, 65, 16.0, "Bola de Fogo");
+        Mago heroi4 = new Mago("Elenara", 1, 60, 18.0, "Raio de Gelo");
+    
+        //Demonstração do polimorfismo com ArrayList
+        System.out.println("=== DEMONSTRAÇÃO DE POLIMORFISMO ===");
+        System.out.println();
+
+        ArrayList<Personagem> personagens = new ArrayList<>();
+        personagens.add(heroi1);
+        personagens.add(heroi2);
+        personagens.add(heroi3);
+        personagens.add(heroi4);
+
+        // Percorrendo a lista de personagem polimorficamente
+        for (Personagem p : personagens) {
+            p.exibirStatus();
+            p.usarHabilidadeEspecial();
+            System.out.println("---------------------------------------\n");
+        }
+
+        // Demonstração de que ainda podemos acessar métodos específicos
+        System.out.println("=== MÉTODOS ESPECÍFICOS ===");
+        System.out.println();
         
-        
-        heroi1.exibirStatus();
-        heroi2.exibirStatus();
-        heroi3.exibirStatus();
 
     }
+
 }
+

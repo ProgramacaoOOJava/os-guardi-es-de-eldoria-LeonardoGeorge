@@ -1,9 +1,10 @@
+// Aqui estou criando a base para todos os personagens do jogo, ou seja, é a classe pai.
 public abstract class Personagem {
-    String nome;
-    String classe;
-    int nivel;
-    int pontosDeVida;
-    double poderBase;
+    private String nome;
+    private String classe;
+    private int nivel;
+    private int pontosDeVida;
+    private double poderBase;
 
     public Personagem(String nome, String classe, int nivel, int pontosDeVida, double poderBase) {
         this.nome = nome;
@@ -12,6 +13,23 @@ public abstract class Personagem {
         this.pontosDeVida = pontosDeVida;
         this.poderBase = poderBase;
 
+    }
+
+    // Getter - Necessário para dar acesso a outras classes poderem usar os dados da class pai, já que agora estão privados.
+    public String getNome() {
+        return nome;
+    } 
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public double getPoderBase() {
+        return poderBase;
+    }
+
+    public String getClasse() {
+        return classe;
     }
 
     public void exibirStatus() {

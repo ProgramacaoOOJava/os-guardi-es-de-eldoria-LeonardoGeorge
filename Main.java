@@ -28,7 +28,19 @@ public class Main {
         // Demonstração de que ainda podemos acessar métodos específicos
         System.out.println("=== MÉTODOS ESPECÍFICOS ===");
         System.out.println();
+
+        System.out.println("\n=== CRIANDO GRUPOS ===");
         
+        Grupo grupoHumanos = new Grupo();
+        grupoHumanos.adicionarPersonagem(heroi1); // Arthus
+        grupoHumanos.adicionarPersonagem(heroi3); // Alquimista
+
+        Grupo grupoElfos = new Grupo();
+        grupoElfos.adicionarPersonagem(heroi2); // Lotus
+        grupoElfos.adicionarPersonagem(heroi4); // Elenara
+
+        System.out.println("\n=== BATALHAS ===");
+        grupoHumanos.batalhar(heroi1, heroi4); // Arthus vs Elenara
 
     }
 
